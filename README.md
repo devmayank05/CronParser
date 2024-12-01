@@ -2,6 +2,9 @@
 
 This project is designed to validate and build cron expressions based on client input. It is divided into three main components: input validation, segment parsing, and cron expression construction. Each segment of the cron expression is parsed using different parsers with distinct logic, allowing flexibility and maintainability in handling various cron expression formats.
 
+### Valid Cron Expression:
+*/15 0 1,15 * 1-5 /usr/bin/find
+
 ## Project Structure
 
 1. **Client-Facing Layer:**
@@ -45,12 +48,12 @@ This project is designed to validate and build cron expressions based on client 
 
 - **Flexible Parsing:**
   - Supports multiple formats of cron expression segments.
-  - Handles wildcards, ranges, lists, and step values effectively.
 
 - **Unit Testing:**
   - Unit tests are provided to validate the correctness of the final `CronExpression` object.
   - Tests also validate the behavior of each segment parser, ensuring that the segment values are correctly parsed and fall within the valid range.
 
-## Example
+## Test
+   - We can run as console application by giving cron string as param
+   - if we need to test multiple params, we run application and it will keep promting to enter cron string
 
-### Valid Cron Expression:
